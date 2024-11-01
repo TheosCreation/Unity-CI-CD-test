@@ -43,7 +43,7 @@ jobs:
         uses: game-ci/unity-test-runner@v3
         id: testRunner
         with:
-          unityVersion: 2022.3.0f1          # Specify Unity version (ensure it's compatible)
+          unityVersion: 2023.2.20f1          # Specify Unity version
           testMode: ${{ matrix.testMode }}
           checkName: ${{ matrix.testMode }} test results
           githubToken: ${{ secrets.GITHUB_TOKEN }}
