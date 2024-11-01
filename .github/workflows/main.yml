@@ -44,6 +44,19 @@ jobs:
             Library-test-project-
             Library-
 
+      # Check Docker version
+      - name: Check Docker Version
+        run: docker --version
+
+      # Check Disk Space
+      - name: Check Disk Space
+        run: df -h
+
+      # Pull Unity Test Runner Docker Image for Debugging
+      - name: Debug Docker Image Pull
+        run: docker pull game-ci/unity-test-runner:latest
+
+      # Run tests
       - name: Run tests
         uses: game-ci/unity-test-runner@v2
         id: testRunner
